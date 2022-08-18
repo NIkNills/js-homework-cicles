@@ -9,7 +9,10 @@ let enterSecondNumber = +prompt(
   "10"
 );
 
-if (enterSecondNumber - enterFirstNumber >= 4 || enterFirstNumber - enterSecondNumber >= 4) {
+if (
+  enterSecondNumber - enterFirstNumber >= 4 ||
+  enterFirstNumber - enterSecondNumber >= 4
+) {
   if (enterFirstNumber < enterSecondNumber) {
     while (enterFirstNumber <= enterSecondNumber) {
       console.log(enterFirstNumber);
@@ -54,4 +57,48 @@ puc: if (enterPinCode !== pinCode) {
       break puc;
     }
   }
+}
+
+const firstNumberOfTheRange = +prompt(
+  "Please enter first number of the range",
+  "0"
+);
+const secondNumberOfTheRange = +prompt(
+  "Please enter second number of the range",
+  "20"
+);
+
+let strictInequality,
+  evenOrOddNumber,
+  positiveOrNegativeNumber,
+  fractionalOrNonNumber;
+
+for (let i = firstNumberOfTheRange; i <= secondNumberOfTheRange; i++) {
+  if (i < 100) {
+    strictInequality = "less";
+  } else {
+    strictInequality = "more";
+  }
+
+  if (i % 2 === 0) {
+    evenOrOddNumber = "even";
+  } else {
+    evenOrOddNumber = "odd";
+  }
+
+  if (i >= 0) {
+    positiveOrNegativeNumber = "positive";
+  } else {
+    positiveOrNegativeNumber = "negative";
+  }
+
+  if (i % 1 === 0) {
+    fractionalOrNonNumber = "non-fractional";
+  } else {
+    fractionalOrNonNumber = "fractional";
+  }
+
+  console.log(
+    `The number ${i} is ${strictInequality} than 100, ${evenOrOddNumber}, ${positiveOrNegativeNumber}, ${fractionalOrNonNumber}`
+  );
 }
