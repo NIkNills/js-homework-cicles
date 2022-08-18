@@ -102,3 +102,23 @@ for (let i = firstNumberOfTheRange; i <= secondNumberOfTheRange; i++) {
     `The number ${i} is ${strictInequality} than 100, ${evenOrOddNumber}, ${positiveOrNegativeNumber}, ${fractionalOrNonNumber}`
   );
 }
+
+const enterIterationStart = +prompt(
+  "Enter the number from which iteration will start",
+  "0"
+);
+const enterIterationEnd = +prompt(
+  "Enter the number where the iteration will end",
+  "20"
+);
+let endOfIteration = 7;
+
+for (let i = enterIterationStart; i <= enterIterationEnd; i++) {
+  console.log(i);
+
+  endOfIteration--;
+
+  if (endOfIteration === 0) {
+    break;
+  }
+}
